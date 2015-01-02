@@ -21,7 +21,6 @@ ul, ol {
 	list-style: none;
 }
 h1, h2, h3, h4, h5, h6 {
-	/*font-family: 'Lobster';*/
 	font-weight: 400;
 }
 .clear {
@@ -34,13 +33,12 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 auto;
 }
 html, input, textarea, select {
-	/* font-family: 'Cabin'; */
-	/* font-weight: 400; */
+	font-family: 'Open Sans';
+	font-weight: 400;
 	font-size: 16px;
 	line-height: 23px;
 	color: #000;
 }
-
 body {
     background: #fff;
     font-size: 62.5%;
