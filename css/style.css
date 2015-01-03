@@ -32,6 +32,13 @@ h1, h2, h3, h4, h5, h6 {
 .pos-center {
 	margin: 0 auto;
 }
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
 html, input, textarea, select {
 	font-family: 'Open Sans';
 	font-weight: 400;
@@ -53,8 +60,7 @@ body {
 	background: rgba(0,0,0,.7);
 }
 .main-header > .pos-center {
-	width: 1100px;
-	overflow: hidden;
+	max-width: 1100px;
 }
 
 /*HOME-HEADER-BG*/
@@ -87,16 +93,19 @@ body {
 }
 .menu {
 	margin: 0;
+	padding: 0;
 }
 .menu > li {
 	float: left;
 }
-.menu > li > a {
+.menu > li > a,
+.sub-menu > li > a {
 	display: block;
-	padding: 0 15px;
-	color: rgba(255,255,255,.7);
-	font-size: 2.5em;
 	font-weight: 300;
+}
+.menu > li > a {
+	padding: 0 15px;
+	font-size: 2.5em;
 	line-height: 70px;
 }
 .menu > li:first-child > a {
@@ -105,7 +114,40 @@ body {
 .menu > li:last-child > a {
 	padding-right: 0;
 }
-.menu > li > a:hover {
+.menu > li > a,
+.sub-menu > li > a {
+	color: rgba(255,255,255,.7);
+}
+.menu > li > a:hover,
+.sub-menu > li > a:hover {
 	color: rgba(255,255,255,1);
 }
-
+.sub-menu {
+	position: absolute;
+	display: none;
+	padding: 0;
+	background: rgba(0,0,0,.7)
+}
+.sub-menu > li > a {
+	padding: 5px 36px;
+	font-size: 2em;
+}
+.sub-menu > li > a {
+	background-repeat: no-repeat !important;
+	background-position: 10px center !important;
+}
+.sub-menu > li.kuchnia-polska > a {
+	background: url('../img/pl.png');
+}
+.sub-menu > li.kuchnia-wloska > a {
+	background: url('../img/it.png');
+}
+.sub-menu > li.kuchnia-hiszpanska > a {
+	background: url('../img/es.png');
+}
+.sub-menu > li.kuchnia-francuska > a {
+	background: url('../img/fr.png');
+}
+.sub-menu > li.pozostale-kuchnie > a {
+	background: url('../img/pozostale.png');
+}
