@@ -50,6 +50,9 @@ body {
     background: #fff;
     font-size: 62.5%;
 }
+.container {
+	font-size: 1.6em;
+}
 
 /* --------------------------------------------------------------------
 =HEADER
@@ -75,6 +78,7 @@ body {
 
 .logo {
 	float: left;
+	height: 50px;
 	margin: 10px 0;
 }
 .logo path,
@@ -119,14 +123,16 @@ body {
 	color: rgba(255,255,255,.7);
 }
 .menu > li > a:hover,
-.sub-menu > li > a:hover {
+.sub-menu > li > a:hover,
+.menu > li.active > a {
 	color: rgba(255,255,255,1);
 }
 .sub-menu {
 	position: absolute;
 	display: none;
 	padding: 0;
-	background: rgba(0,0,0,.7)
+	background: rgba(0,0,0,.8);
+	z-index: 100;
 }
 .sub-menu > li > a {
 	padding: 5px 36px;
@@ -150,4 +156,77 @@ body {
 }
 .sub-menu > li.pozostale-kuchnie > a {
 	background: url('../img/pozostale.png');
+}
+.sub-menu > li.wszystkie > a {
+	text-align: center;
+	background: rgba(192, 57, 43,.8);
+}
+
+/*HOME SLIDER*/
+
+.home-slider.container {
+	color: #fff;
+}
+.home-slider > .pos-center {
+	position: relative;
+	max-width: 1100px;
+}
+.home-slider .slides,
+.home-slider .slides .item {
+	height: 430px;
+	overflow: hidden;
+}
+
+/*INFO*/
+
+.info {
+	text-align: center;
+}
+.info a {
+	border-bottom: 0;
+}
+.info h1 {
+	display: inline-block;
+	margin: 90px 0 5px 0;
+	padding: 20px;
+	border: 5px solid #fff;
+	font-size: 3em;
+	font-weight: 800;
+	line-height: 1em;
+	text-shadow: 1px 1px 3px #000;
+}
+.info p {
+	margin-top: 5px; 
+	font-size: 1.4em;
+	font-weight: 300;
+	text-shadow: 1px 1px 1px #000;
+}
+
+/*PAGINACJA*/
+
+.paginacja {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+.paginacja ul {
+	margin: 0;
+	padding: 0;
+}
+.paginacja ul li {
+	float: left;
+}
+.paginacja ul li a {
+	display: block;
+	height: 20px;
+	width: 20px;
+	margin: 0 5px;
+	border: 2px solid rgba(255,255,255,.6);
+	border-radius: 50%;
+	text-indent: -9999em;
+}
+.paginacja ul li a:hover,
+.paginacja ul li.selected a {
+	background: rgba(255,255,255,.6);
 }
