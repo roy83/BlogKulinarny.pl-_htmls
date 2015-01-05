@@ -260,7 +260,8 @@ body {
 .quote {
 	border-top: 4px solid #000;
 	border-bottom: 4px solid #000;
-	background: #ecf0f1;
+	background: #000;
+	color: #fff;
 }
 .quote .pos-center {
 	max-width: 900px;
@@ -268,7 +269,8 @@ body {
 	font-size: 1.6em;
 }
 .quote blockquote > p {
-	margin: 5px 0;
+	margin: 0;
+	padding: 10px 0;
 }
 
 /* --------------------------------------------------------------------
@@ -318,13 +320,25 @@ body {
 -------------------------------------------------------------------- */
 
 .inspiracje .pos-center {
-	max-width: 940px;
+	max-width: 960px;
 }
-.inspiracje-slider .slider-wrapper {
-	padding: 10px;
+.inspiracje .inspiracje-slider {
+	position: relative;
+}
+.inspiracje .slider-wrapper {
+	position: relative;
+}
+.inspiracje-slider .items,
+.inspiracje-slider .item {
+	overflow: hidden;
 }
 .inspiracje-slider .item {
+	position: relative;
 	float: left;
-	width: 30%;
-	margin: 0 1.5%;
+	height: 350px;
+	width: 300px;
+	margin: 0 10px;
+}
+.inspiracje-slider .item > a {
+	display: block;
 }

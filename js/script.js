@@ -119,6 +119,39 @@
 			}
 		}
 	});
+
+	//inspiracje slider
+	// var carousel2 = $(".inspiracje .items");
+
+	// carousel2.carouFredSel({
+		// width: "100%",
+		// height: "auto",
+		// responsive: true,
+		// auto: true,
+	// 	scroll: {
+	// 		items: 1,
+	// 	    pauseOnHover: true
+	// 	},
+	// 	duration: 1000,
+	// 	swipe: {
+	// 		onTouch: true,
+	// 	    onMouse: true
+	// 	},
+	// 	onCreate: function () {
+	// 		$(window).on('resize', function () {
+	// 	    	carousel2.parent().add(carousel2).height(carousel2.children().first().height());
+	// 	    }).trigger('resize');
+	// 	}
+	// });
+	$(".inspiracje .items").carouFredSel({
+		width: "100%",
+		height: "auto",
+		auto: true,
+		scroll: {
+			items: 1,
+		    pauseOnHover: true
+		}
+	});
 	
 	//home-boxes
 	$('.boxes .box').hover(step2Show,step2Hide);
