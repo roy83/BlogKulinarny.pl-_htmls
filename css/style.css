@@ -327,6 +327,7 @@ body {
 .cien-pattern .pos-center {
 	max-width: 900px;
 	height: 10px;
+	opacity: .5;
 	background: url('../img/cien-center.png') center top no-repeat;
 }
 
@@ -373,12 +374,25 @@ body {
 	color: #fff;
 }
 .footer .pos-center {
-	max-width: 960px;
+	max-width: 1100px;
 }
 .footer-menus,
-.footer-menus > ul,
-.tag-cloud {
+.footer-menus > ul {
 	float: left;
+}
+.footer-menus,
+.tag-cloud {
+	height: 115px;
+	padding-left: 150px;
+	background-repeat: no-repeat !important;
+	background-position: left center !important; 
+}
+.footer-menus {
+	background: url('../img/footer-menus.png');
+}
+.tag-cloud {
+	float: right;
+	background: url('../img/footer-tag-cloud.png');
 }
 .footer-menus > ul {
 	padding: 0 20px;
