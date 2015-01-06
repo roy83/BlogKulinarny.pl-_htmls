@@ -316,6 +316,21 @@ body {
 }
 
 /* --------------------------------------------------------------------
+=CIEN
+-------------------------------------------------------------------- */
+
+.cien-pattern {
+	height: 10px;
+	width: 100%;
+	background: url('../img/cien-pattern.png') left top repeat-x;
+}
+.cien-pattern .pos-center {
+	max-width: 900px;
+	height: 10px;
+	background: url('../img/cien-center.png') center top no-repeat;
+}
+
+/* --------------------------------------------------------------------
 =INSPIRACJE
 -------------------------------------------------------------------- */
 
@@ -341,4 +356,35 @@ body {
 }
 .inspiracje-slider .item > a {
 	display: block;
+}
+
+/* --------------------------------------------------------------------
+=Komentarz
+-------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------
+=FOOTER-HOME
+-------------------------------------------------------------------- */
+
+.footer {
+	padding: 20px 0;
+	background: #000;
+	font-size: 1.4em;
+	color: #fff;
+}
+.footer .pos-center {
+	max-width: 960px;
+}
+.footer-menus,
+.footer-menus > ul,
+.tag-cloud {
+	float: left;
+}
+.footer-menus > ul {
+	padding: 0 20px;
+	margin: 0;
+}
+.footer-menus > ul:nth-child(2) {
+	border-left: 1px dashed #ccc;
+	border-right: 1px dashed #ccc;
 }
